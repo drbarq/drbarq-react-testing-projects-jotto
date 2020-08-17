@@ -1,6 +1,5 @@
 import { ShallowWrapper } from "enzyme";
 import checkPropTypes from "check-prop-types";
-import { hasUncaughtExceptionCaptureCallback } from "process";
 
 /**
  * Return node(s) with the given data-test attribute.
