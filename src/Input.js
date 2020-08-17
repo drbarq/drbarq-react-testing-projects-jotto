@@ -12,7 +12,11 @@ function Input({ secretWord }) {
           type="text"
           placeholder="enter guess"
         />
-        <button data-test="submit-button" className="btn btn-primary mb-2">
+        <button
+          data-test="submit-button"
+          className="btn btn-primary mb-2"
+          onClick={(e) => e.preventDefault()}
+        >
           Submit
         </button>
       </form>
