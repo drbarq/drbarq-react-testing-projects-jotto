@@ -5,7 +5,7 @@ function Input({ secretWord }) {
   const [currentGuess, setCurrentGuess] = React.useState();
 
   const handleClick = (e) => {
-    // e.preventDefault();
+    e.preventDefault();
     setCurrentGuess("");
   };
 
