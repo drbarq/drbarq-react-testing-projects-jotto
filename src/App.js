@@ -1,8 +1,8 @@
 import React from "react";
 import "./App.css";
-
 import GuessedWords from "./GuessedWords";
 import Congrats from "./Congrats";
+import hookActions from "./actions/hookActions";
 
 /**
  * reducer to update state, called automatically by dispatch
@@ -24,6 +24,14 @@ function reducer(state, action) {
 
 function App() {
   const [state, dispatch] = React.useReducer(reducer, { secretWord: null });
+
+  const setSecretWord = (secretWord) => {
+    dispatch({ type: "setSecretWord", payload: secretWord });
+  };
+
+  React.useEffect(() => {
+    hookActions.getSecretWord(setSecretWord);
+  }, []);
 
   return (
     <div data-test="component-app" className="container">
